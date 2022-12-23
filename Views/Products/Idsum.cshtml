@@ -1,0 +1,42 @@
+﻿@model StorageV1.Models.ProductViewModel
+
+@{
+    ViewData["Title"] = "Idsum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Summery for a Category</h1> @*Ej klar! Saknar parameter som tar in raden man klickar på.*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sumprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sumcount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Sumprice)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Sumcount)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

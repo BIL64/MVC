@@ -1,0 +1,46 @@
+﻿@model IEnumerable<StorageV1.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Summa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Summery for all Categories</h1>
+
+<p>
+    <a asp-action="Index">Back to Products</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sumprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sumcount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Sumprice)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Sumcount)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
